@@ -1,0 +1,4 @@
+#!/bin/sh
+
+docker-compose exec kafka  \
+  bash -c "seq $1 | kafka-console-producer --request-required-acks 1 --broker-list localhost:9092 --topic $2 && echo 'Producer payload done'"
