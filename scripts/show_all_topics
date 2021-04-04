@@ -1,0 +1,4 @@
+#!/bin/sh
+
+docker-compose exec kafka  \
+  kafka-topics --list --zookeeper localhost:2181
